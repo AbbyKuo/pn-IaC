@@ -27,9 +27,9 @@ module "pn-app-s3" {
 
 module "pn-app-cloudfront" {
   source = "./modules/cloudfront"
-  # providers = {
-  #   aws = aws.cloudfront-acm-certs
-  # }
+  providers = {
+    aws = aws.cloudfront-acm-certs
+  }
   root_domain                    = var.root_domain
   frontend_bucket_name           = var.frontend_bucket_name
   env_prefix                     = var.env_prefix
