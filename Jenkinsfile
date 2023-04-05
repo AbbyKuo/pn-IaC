@@ -12,7 +12,7 @@ pipeline {
                 sh 'terraform init'
                 sh 'terraform validate'
                 sh 'terraform plan -out tfplan'
-                sh 'terraform show -no-cplor tfplan > tfplan.txt'
+                sh 'terraform show -no-color tfplan > tfplan.txt'
             }
         }
         stage('TF apply') {
